@@ -21,6 +21,7 @@ public class Empleado {
     @Column(name = "fecha_baja")
     private Date fechaBaja;
     @ManyToOne
+    @JoinColumn(name="categoria_id", referencedColumnName = "categoria_id")
     private Categoria categoria;
 
     public int getEmpleadoId() {
