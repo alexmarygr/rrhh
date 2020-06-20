@@ -38,7 +38,7 @@ public class EmpleadoController {
     GenericResponse resp = new GenericResponse();
     resp.isOk = true;
     resp.id = empleado.getEmpleadoId();
-    resp.message = "empleado genarado con exito";
+    resp.message = "empleado generado con exito";
 
     return ResponseEntity.ok(resp);
   }
