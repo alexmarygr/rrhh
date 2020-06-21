@@ -42,7 +42,6 @@ public class CategoriaService {
             return cOptional.get();
 
         }
-       
         return null;
 
     }

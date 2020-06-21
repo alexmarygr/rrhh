@@ -15,7 +15,8 @@ public class Empleado {
     private String nombre;
     private int edad;
     private BigDecimal sueldo;
-    private int estado;
+    @Column(name = "estado_id")
+    private int estadoId;
     @Column(name = "fecha_alta")
     private Date fechaAlta;
     @Column(name = "fecha_baja")
@@ -57,11 +58,11 @@ public class Empleado {
     }
 
     public int getEstado() {
-        return estado;
+        return estadoId;
     }
 
     public void setEstado(int estado) {
-        this.estado = estado;
+        this.estadoId = estado;
     }
 
     public Date getFechaAlta() {

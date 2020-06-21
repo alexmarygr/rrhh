@@ -17,7 +17,7 @@ public class CategoriaController {
     @Autowired
     CategoriaService categoriaService;
 
-    @PostMapping("/categorias")
+    @PostMapping("/categorias")//asi lo llamo en el postame
     public ResponseEntity<?>  crearCategoria(@RequestBody Categoria categoria) {
         categoriaService.crearCategoria(categoria);
         return ResponseEntity.ok(categoria);
