@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="empleado")
 public class Empleado {
@@ -23,6 +25,7 @@ public class Empleado {
     private Date fechaBaja;
     @ManyToOne
     @JoinColumn(name="categoria_id", referencedColumnName = "categoria_id")
+    @JsonIgnore
     private Categoria categoria;
 
     public int getEmpleadoId() {

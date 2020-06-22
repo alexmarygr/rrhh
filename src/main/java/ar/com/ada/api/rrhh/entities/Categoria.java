@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
+
 @Entity
 @Table(name="categoria")
 public class Categoria {
@@ -26,6 +28,7 @@ public class Categoria {
     private BigDecimal sueldoBase;
 
     @OneToMany(mappedBy = "categoria",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    //@LazyCollection(LazyCollectionOption.FALSE)
     private List<Empleado> empleados;
 
     public int getCategoriaId() {
